@@ -1,4 +1,5 @@
 package model;
+
 import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Table;
@@ -31,7 +32,7 @@ public class User {
 
     }
 
-    public User(Long id,String name, String lastName, Byte age) {
+    public User(Long id, String name, String lastName, Byte age) {
         this.id = id;
         this.name = name;
         this.lastName = lastName;
