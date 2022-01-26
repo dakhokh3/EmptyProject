@@ -1,16 +1,16 @@
-import service.UserService;
-import service.UserServiceImpl;
+import dao.UserDao;
+import dao.UserDaoHibernateImpl;
 
 public class Main {
     public static void main(String[] args) {
-        UserService userService = new UserServiceImpl();
-        userService.createUsersTable();
-        userService.saveUser("Ivan","Petrov",(byte)24);
-        userService.saveUser("Vladimir","Ivanov",(byte)45);
-        userService.saveUser("Sergey","Sidorov",(byte)14);
-        userService.saveUser("Alexey","Makhno",(byte)55);
-        userService.getAllUsers();
-        userService.cleanUsersTable();
-        userService.dropUsersTable();
+       UserDao userDao = new UserDaoHibernateImpl();
+       userDao.createUsersTable();
+       userDao.saveUser("Ivan","Petrov",(byte)24);
+       userDao.saveUser("Vladimir","Ivanov",(byte)45);
+       userDao.saveUser("Sergey","Sidorov",(byte)14);
+       userDao.saveUser("Alexey","Makhno",(byte)55);
+       userDao.getAllUsers();
+       userDao.cleanUsersTable();
+       userDao.dropUsersTable();
     }
 }
