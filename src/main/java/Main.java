@@ -1,9 +1,10 @@
 import dao.UserDao;
 import dao.UserDaoHibernateImpl;
+import service.UserServiceImpl;
 
 public class Main {
     public static void main(String[] args) {
-       UserDao userDao = new UserDaoHibernateImpl();
+       UserServiceImpl userDao = new UserServiceImpl();
        userDao.createUsersTable();
        userDao.saveUser("Ivan","Petrov",(byte)24);
        userDao.saveUser("Vladimir","Ivanov",(byte)45);
